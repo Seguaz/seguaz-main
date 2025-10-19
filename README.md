@@ -1,6 +1,8 @@
 # 🌟 Seguaz - Personal Portfolio Website
 
-<img src="./assets/logo.png" alt="Portfolio Preview" width="200" />
+<p align="center">
+    <img src="./assets/logo.png" alt="Logo" width="200" />
+</p>
 
 ## 🚀 About
 
