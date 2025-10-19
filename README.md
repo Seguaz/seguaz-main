@@ -63,12 +63,12 @@ git clone https://github.com/Seguaz/seguaz-main.git
 
 That's it! No build process required.
 
-## 📞 Contact
+## 📞 Contacthttps://seguaz.github.io/seguaz-main/
 
 - 💚 WhatsApp: [+34 618 07 98 62](https://wa.me/34618079862)
 - 📧 Email: noeseguaz@gmail.com
 - 💼 LinkedIn: [Noelia Segura](https://www.linkedin.com/in/noelia-segura-seguaz-50385b38b/)
-- 📸 Instagram: [@noeliaseguaz](https://www.instagram.com/noeliaseguaz/)
+- 📸 Instagram: [@seguaz_](https://www.instagram.com/seguaz_/)
 - 🌐 Website: [seguaz.online](https://seguaz.online)
 
 ## 📄 License
