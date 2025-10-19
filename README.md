@@ -22,7 +22,6 @@ Professional portfolio website showcasing web development services and technical
 - 📱 **Fully Responsive** - Perfect on all devices
 - 🌈 **Brand Colors** - Social media links with official brand colors
 - ⚡ **Smooth Scroll** - Seamless navigation experience
-- 💚 **WhatsApp Integration** - Direct contact button
 
 ## 🛠️ Technologies Used
 
@@ -65,7 +64,6 @@ That's it! No build process required.
 
 ## 📞 Contacthttps://seguaz.github.io/seguaz-main/
 
-- 💚 WhatsApp: [+34 618 07 98 62](https://wa.me/34618079862)
 - 📧 Email: noeseguaz@gmail.com
 - 💼 LinkedIn: [Noelia Segura](https://www.linkedin.com/in/noelia-segura-seguaz-50385b38b/)
 - 📸 Instagram: [@seguaz_](https://www.instagram.com/seguaz_/)
