@@ -1,0 +1,36 @@
+# Robots.txt for https://seguaz.online/
+# Generated on 2025-10-19
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /styles.css
+Allow: /scripts.js
+
+# Disallow sensitive files
+Disallow: /README.md
+
+# Sitemaps
+Sitemap: https://seguaz.online/sitemap.xml
+
+# Crawl-delay (optional, prevents server overload)
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
