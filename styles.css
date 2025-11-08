@@ -188,6 +188,51 @@ button:hover ~ .cursor {
     transform: scale(0.95) rotate(-15deg);
 }
 
+/* ========================================
+   LANGUAGE TOGGLE BUTTON
+======================================== */
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 15px var(--card-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.language-toggle:hover {
+    transform: scale(1.1) rotate(-15deg);
+    background: var(--accent-hover);
+    box-shadow: 0 6px 20px var(--card-shadow);
+}
+
+.language-toggle:active {
+    transform: scale(0.95) rotate(15deg);
+}
+
+.language-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.language-toggle:hover i {
+    transform: rotateY(360deg);
+}
+
+.lang-text {
+    transition: all 0.3s ease;
+}
+
 .sun-icon,
 .moon-icon {
     position: absolute;

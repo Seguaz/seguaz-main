@@ -147,6 +147,11 @@
         <i class="bi bi-moon-stars-fill moon-icon"></i>
     </button>
 
+    <!-- Language Toggle Button -->
+    <button class="language-toggle" id="languageToggle" aria-label="Toggle language">
+        <i class="bi bi-globe"></i>
+    </button>
+
     <!-- Hero Section -->
     <section class="hero-section" id="home" itemscope itemtype="https://schema.org/Person">
         <div class="container">
@@ -160,16 +165,19 @@
                         Hi! I'm <span class="highlight typing-text">Seguaz</span>
                     </h1>
                     <h2 class="hero-subtitle" id="typingSubtitle" itemprop="jobTitle"></h2>
-                    <p class="hero-description" itemprop="description">
+                    <p class="hero-description" itemprop="description" data-i18n="hero-description">
                         I create custom web solutions and provide quality IT services. 
                         Specialized in clean code, responsive design, aand exceptional user experiences.
                     </p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary btn-animated">
-                            <i class="bi bi-envelope-fill me-2"></i>Get in Touch
+                            <i class="bi bi-envelope-fill me-2"></i><span data-i18n="get-in-touch">Get in Touch</span>
                         </a>
                         <a href="#services" class="btn btn-outline btn-animated">
-                            <i class="bi bi-code-slash me-2"></i>View Services
+                            <i class="bi bi-code-slash me-2"></i><span data-i18n="view-services">View Services</span>
+                        </a>
+                        <a href="https://ko-fi.com/seguaz_" class="btn btn-outline btn-animated" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-cup-hot me-2"></i><span data-i18n="buy-coffee">Buy Me a Coffee</span>
                         </a>
                     </div>
                     <div class="social-links">
@@ -203,15 +211,15 @@
     <!-- Services Section -->
     <section class="services-section" id="services" itemscope itemtype="https://schema.org/Service">
         <div class="container">
-            <h2 class="section-title">What I Offer</h2>
+            <h2 class="section-title" data-i18n="services-title">What I Offer</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <article class="service-card glass-card" data-tilt itemscope itemtype="https://schema.org/Service">
                         <div class="service-icon">
                             <i class="bi bi-code-square"></i>
                         </div>
-                        <h3 itemprop="name">Web Development</h3>
-                        <p itemprop="description">Custom websites with clean, optimized code using modern technologies like HTML5, CSS3, JavaScript, React, and Vue.js.</p>
+                        <h3 itemprop="name" data-i18n="web-dev-title">Web Development</h3>
+                        <p itemprop="description" data-i18n="web-dev-desc">Custom websites with clean, optimized code using modern technologies like HTML5, CSS3, JavaScript, React, and Vue.js.</p>
                         <div class="card-glow"></div>
                     </article>
                 </div>
@@ -220,8 +228,8 @@
                         <div class="service-icon">
                             <i class="bi bi-palette-fill"></i>
                         </div>
-                        <h3 itemprop="name">Web Design</h3>
-                        <p itemprop="description">Modern, intuitive, and responsive interfaces that connect with your audience and work perfectly on all devices.</p>
+                        <h3 itemprop="name" data-i18n="web-design-title">Web Design</h3>
+                        <p itemprop="description" data-i18n="web-design-desc">Modern, intuitive, and responsive interfaces that connect with your audience and work perfectly on all devices.</p>
                         <div class="card-glow"></div>
                     </article>
                 </div>
@@ -230,8 +238,8 @@
                         <div class="service-icon">
                             <i class="bi bi-tools"></i>
                         </div>
-                        <h3 itemprop="name">IT Services</h3>
-                        <p itemprop="description">Computer repair, technical consulting, and continuous support. Quick and effective solutions with warranty included.</p>
+                        <h3 itemprop="name" data-i18n="it-services-title">IT Services</h3>
+                        <p itemprop="description" data-i18n="it-services-desc">Computer repair, technical consulting, and continuous support. Quick and effective solutions with warranty included.</p>
                         <div class="card-glow"></div>
                     </article>
                 </div>
@@ -242,7 +250,7 @@
     <!-- Skills Section -->
     <section class="skills-section" id="skills">
         <div class="container">
-            <h2 class="section-title">Technologies & Tools</h2>
+            <h2 class="section-title" data-i18n="skills-title">Technologies & Tools</h2>
             <div class="skills-grid">
                 <div class="skill-item">
                     <i class="bi bi-filetype-html"></i>
@@ -283,8 +291,8 @@
     <!-- Contact Section -->
     <section class="contact-section" id="contact" itemscope itemtype="https://schema.org/ContactPage">
         <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
-            <p class="contact-intro">
+            <h2 class="section-title" data-i18n="contact-title">Let's Work Together</h2>
+            <p class="contact-intro" data-i18n="contact-intro">
                 I'm always open to new projects and collaborations. Whether you need a professional website, 
                 technical advice, or IT support, I'm here to help!
             </p>
@@ -293,10 +301,13 @@
                     <i class="bi bi-discord me-2"></i>Discord
                 </a>
                 <a href="mailto:noeseguaz@gmail.com" class="btn btn-outline btn-animated" rel="noopener noreferrer" aria-label="Send Email">
-                    <i class="bi bi-envelope-fill me-2"></i>Email Me
+                    <i class="bi bi-envelope-fill me-2"></i><span data-i18n="email-me">Email Me</span>
                 </a>
                 <a href="https://www.linkedin.com/in/noelia-segura-seguaz-50385b38b/" class="btn btn-outline btn-animated" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
                     <i class="bi bi-linkedin me-2"></i>LinkedIn
+                </a>
+                <a href="https://ko-fi.com/seguaz_" class="btn btn-outline btn-animated" target="_blank" rel="noopener noreferrer" aria-label="Buy me a coffee">
+                    <i class="bi bi-cup-hot me-2"></i><span data-i18n="buy-coffee">Buy Me a Coffee</span>
                 </a>
             </div>
         </div>
@@ -305,8 +316,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Seguaz. Available for freelance projects.</p>
-            <p class="footer-meta">Made with <i class="bi bi-heart-fill"></i> by Seguaz</p>
+            <p data-i18n="footer-text">© 2025 Seguaz. Available for freelance projects.</p>
+            <p class="footer-meta"><span data-i18n="footer-made">Made with</span> <i class="bi bi-heart-fill"></i> <span data-i18n="footer-by">by Seguaz</span></p>
         </div>
     </footer>
 

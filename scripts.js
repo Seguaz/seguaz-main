@@ -395,6 +395,113 @@ themeToggle.addEventListener('keydown', (e) => {
 });
 
 // ========================================
+// LANGUAGE TOGGLE FUNCTIONALITY
+// ========================================
+const languageToggle = document.getElementById('languageToggle');
+
+// Check for saved language preference or default to 'en'
+const currentLanguage = localStorage.getItem('language') || 'en';
+
+// Apply saved language on page load
+document.documentElement.setAttribute('lang', currentLanguage);
+
+// Language toggle function
+function toggleLanguage() {
+    const lang = document.documentElement.getAttribute('lang');
+    const newLang = lang === 'en' ? 'es' : 'en';
+    
+    // Add rotation animation
+    languageToggle.style.transform = 'rotate(-360deg) scale(1.2)';
+    
+    // Apply new language
+    setTimeout(() => {
+        document.documentElement.setAttribute('lang', newLang);
+        localStorage.setItem('language', newLang);
+        
+        // Update page content
+        updatePageContent(newLang);
+        
+        // Reset button transform
+        setTimeout(() => {
+            languageToggle.style.transform = '';
+        }, 300);
+    }, 150);
+}
+
+// Update page content based on language
+function updatePageContent(lang) {
+    const translations = {
+        en: {
+            'hero-title-prefix': "Hi! I'm",
+            'hero-description': 'I create custom web solutions and provide quality IT services. Specialized in clean code, responsive design, and exceptional user experiences.',
+            'get-in-touch': 'Get in Touch',
+            'view-services': 'View Services',
+            'buy-coffee': 'Buy Me a Coffee',
+            'services-title': 'What I Offer',
+            'web-dev-title': 'Web Development',
+            'web-dev-desc': 'Custom websites with clean, optimized code using modern technologies like HTML5, CSS3, JavaScript, React, and Vue.js.',
+            'web-design-title': 'Web Design',
+            'web-design-desc': 'Modern, intuitive, and responsive interfaces that connect with your audience and work perfectly on all devices.',
+            'it-services-title': 'IT Services',
+            'it-services-desc': 'Computer repair, technical consulting, and continuous support. Quick and effective solutions with warranty included.',
+            'skills-title': 'Technologies & Tools',
+            'contact-title': "Let's Work Together",
+            'contact-intro': "I'm always open to new projects and collaborations. Whether you need a professional website, technical advice, or IT support, I'm here to help!",
+            'email-me': 'Email Me',
+            'footer-text': '© 2025 Seguaz. Available for freelance projects.',
+            'footer-made': 'Made with',
+            'footer-by': 'by Seguaz'
+        },
+        es: {
+            'hero-title-prefix': '¡Hola! Soy',
+            'hero-description': 'Creo soluciones web personalizadas y proporciono servicios de TI de calidad. Especializada en código limpio, diseño responsivo y experiencias de usuario excepcionales.',
+            'get-in-touch': 'Ponte en Contacto',
+            'view-services': 'Ver Servicios',
+            'buy-coffee': 'Cómprame un Café',
+            'services-title': 'Mis Servicios',
+            'web-dev-title': 'Desarrollo Web',
+            'web-dev-desc': 'Sitios web personalizados con código limpio y optimizado usando tecnologías modernas como HTML5, CSS3, JavaScript, React y Vue.js.',
+            'web-design-title': 'Diseño Web',
+            'web-design-desc': 'Interfaces modernas, intuitivas y responsivas que conectan con tu audiencia y funcionan perfectamente en todos los dispositivos.',
+            'it-services-title': 'Servicios de TI',
+            'it-services-desc': 'Reparación de computadoras, asesoramiento técnico y soporte continuo. Soluciones rápidas y efectivas con garantía incluida.',
+            'skills-title': 'Tecnologías y Herramientas',
+            'contact-title': 'Trabajemos Juntos',
+            'contact-intro': '¡Siempre estoy abierta a nuevos proyectos y colaboraciones! Ya sea que necesites un sitio web profesional, asesoramiento técnico o soporte de TI, ¡estoy aquí para ayudarte!',
+            'email-me': 'Envíame un Email',
+            'footer-text': '© 2025 Seguaz. Disponible para proyectos freelance.',
+            'footer-made': 'Hecho con',
+            'footer-by': 'por Seguaz'
+        }
+    };
+
+    // Update elements with data-i18n attributes
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // Update page title
+    const pageTitle = lang === 'en' 
+        ? 'Seguaz - Full Stack Developer | Web Design & Development'
+        : 'Seguaz - Desarrolladora Full Stack | Diseño y Desarrollo Web';
+    document.title = pageTitle;
+}
+
+// Add event listener to language toggle button
+languageToggle.addEventListener('click', toggleLanguage);
+
+// Keyboard accessibility for language toggle
+languageToggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleLanguage();
+    }
+});
+
+// ========================================
 // CONSOLE EASTER EGG
 // ========================================
 console.log('%c👋 Hi there, curious developer!', 'color: #4285F4; font-size: 20px; font-weight: bold;');
